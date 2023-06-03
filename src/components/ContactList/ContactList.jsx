@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from '../Style.module.css';
 
 const ContactsList = ({ contacts, onDelete }) => {
@@ -14,5 +15,15 @@ const ContactsList = ({ contacts, onDelete }) => {
     </ul>
   );
 };
+
+ContactsList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired
+    })
+  )
+}
 
 export default ContactsList;
