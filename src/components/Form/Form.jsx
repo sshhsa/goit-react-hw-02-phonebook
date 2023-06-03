@@ -31,8 +31,8 @@ class Form extends Component {
     const { name, number } = this.state;
     return (
       <form className={css.formSubmit} onSubmit={this.handleOnSubmitForm}>
-        <label>
-          Name:
+        <label className={css.formLabel}>
+          Name
           <input
             type="text"
             name="name"
@@ -41,10 +41,11 @@ class Form extends Component {
             required
             value={name}
             onChange={this.handleInputChange}
+            className={css.formInput}
           />
         </label>
-        <label>
-          Number:
+        <label className={css.formLabel}>
+          Number
           <input
             type="tel"
             name="number"
@@ -53,9 +54,10 @@ class Form extends Component {
             required
             value={number}
             onChange={this.handleInputChange}
+            className={css.formInput}
           />
         </label>
-        <button type="submit">Add contact</button>
+        <button type="submit" className={css.buttonSubmitForm}>Add contact</button>
       </form>
     );
   }

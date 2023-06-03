@@ -1,7 +1,9 @@
+import css from '../Style.module.css';
+
 const Filter = ({ text, onChange }) => {
   return (
-    <label>
-      Filter by Name:
+    <label className={css.formLabel}>
+      Filter by Name
       <input
         type="text"
         name="filter"
@@ -10,6 +12,7 @@ const Filter = ({ text, onChange }) => {
         required
         value={text}
         onChange={onChange}
+        className={css.formInput}
       />
     </label>
   );

@@ -1,6 +1,8 @@
+import css from '../Style.module.css';
+
 const Chapter = ({ chapter }) => {
   return (
-      <h2>{chapter}</h2>
+      <h2 className={css.chapter}>{chapter}</h2>
   );
 };
 

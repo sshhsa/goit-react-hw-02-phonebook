@@ -52,15 +52,17 @@ class App extends Component {
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );
     return (
-      <div className={css.phoneBook}>
-            <Chapter chapter={'Phonebook'}></Chapter>
-            <Form formSubmit={this.handleOnSubmitForm} />
+        <div className={css.phoneBook}>
+            <div className={css.containerDefault}>
+                <Chapter chapter={'Phonebook'}></Chapter>
+                <Form formSubmit={this.handleOnSubmitForm} />
                 <Chapter chapter={'Contacts'}></Chapter>
                 <Filter text={filter} onChange={this.handleInputChange} />
                 <ContactsList
                     contacts={filteredContacts}
                     onDelete={this.deleteEntries}
-                />
+                    />
+            </div>
       </div>
     );
   }
