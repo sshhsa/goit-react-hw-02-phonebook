@@ -39,8 +39,7 @@ class App extends Component {
     }));
   };
 
-  deleteEntries = evt => {
-    const idToDelete = evt.target.dataset.id;
+  deleteEntries = idToDelete => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== idToDelete),
     }));
